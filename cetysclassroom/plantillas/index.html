@@ -3,13 +3,29 @@
 {% block titulo %} Cetys Universidad  {% endblock titulo %}
 
 {% block contenido %}
-<div class = "input-control text" style="height:100%;width:100%;margin:2%">
-    <input type = "text" placeholder="user" id ="Search" style="height:200%;width:100%;"/>
-</div>
-<a class="btn shortcut info" style="height:34%;width:35%;font-size:180%" href="/Horario/{{Matricula}}">
-    <img src = "{{STATIC_URL}}images/Horario.png"></img>
-    Horario
+<div class = "input-control text" style="height:4%;width:100%;">
+    <input type = "text" placeholder="Search" id ="Search" style="height:100%;width:100%;font-size:100%"/>
+    <button class="btn-search"></button>
 
-</a>
+
+<div style="height:88%;width:100%;">
+
+    <img id="map" src = "{{STATIC_URL}}img/croquisCetys.png" style="display:none;height:100%;width:100%;"></img>
+<canvas id="myCanvas" width="1000" height="1000"></canvas>
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var image2 = new Image();
+image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+ctx.drawImage(image2,10,10,1000,1000);
+//var img=document.getElementById("map");
+//ctx.drawImage(img,0,0);
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+
+</script>
+
 </div>
 {% endblock contenido %}

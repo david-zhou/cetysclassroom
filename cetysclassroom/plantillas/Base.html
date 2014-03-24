@@ -4,14 +4,15 @@
 	<meta charset="utf-8">   
 
      <title>{% block titulo %}{% endblock titulo %}</title>
-     <link rel="stylesheet" href="{{STATIC_URL}}css/custom.css">
-     <link rel="stylesheet" href="{{STATIC_URL}}css/metro-bootstrap.css">
-     <link rel="stylesheet" href="{{STATIC_URL}}css/metro-bootstrap-responsive.css">
+     {% load staticfiles %}
+     <link rel="stylesheet" href="{{STATIC_URL}}docs/css/metro-bootstrap.css">
+     <link rel="stylesheet" href="{{STATIC_URL}}docs/css/iconFont.css"
 
+		<script src="{{STATIC_URL}}docs/js/metro/metro.min.js"></script>
         <script src="{{STATIC_URL}}docs/js/jquery/jquery.min.js"></script>
         <script src="{{STATIC_URL}}docs/js/jquery/jquery.widget.min.js"></script>
+        <script src="{{STATIC_URL}}docs/js/metro/metro-input-control.js"></script>
  
-        <script src="{{STATIC_URL}}js/metro-*.js"></script>
 </head>
 <body class = "metro"> 
 
