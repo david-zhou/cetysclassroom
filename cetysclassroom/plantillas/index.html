@@ -1,0 +1,15 @@
+{% extends "Base.html" %}
+
+{% block titulo %} Cetys Universidad  {% endblock titulo %}
+
+{% block contenido %}
+<div class = "input-control text" style="height:100%;width:100%;margin:2%">
+    <input type = "text" placeholder="user" id ="Search" style="height:200%;width:100%;"/>
+</div>
+<a class="btn shortcut info" style="height:34%;width:35%;font-size:180%" href="/Horario/{{Matricula}}">
+    <img src = "{{STATIC_URL}}images/Horario.png"></img>
+    Horario
+
+</a>
+</div>
+{% endblock contenido %}
