@@ -20,9 +20,6 @@ var ctx=c.getContext("2d");
 var image2 = new Image();
 image2.src = "{{STATIC_URL}}img/croquisCetys.png";
 ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
-ctx.moveTo(0,0);
-ctx.lineTo(200,100);
-ctx.stroke();
 </script>
 
 <script language="JavaScript">
@@ -36,49 +33,84 @@ function point_it(event){
     pos_x = pos_x * 563 / screen.width;
     pos_y = pos_y * 563 / screen.width;
 
+    var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	ctx.save();
+
     if(pos_x>20 && pos_x<100 && pos_y>40 && pos_y<100)
     {
-    	alert('Estacionamiento Gimnasio');
+    	//alert('Estacionamiento Gimnasio');
     }
     if(pos_x>115 && pos_x<185 && pos_y>40 && pos_y<100)
     {
-    	alert('Estacionamiento Estadio');
+    	//alert('Estacionamiento Estadio');
+    	var image2 = new Image();
+		image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+		var x1=147*screen.width/563;
+		var x2=243*screen.width/563;
+		var y1=67*screen.width/563;
+		var y2=190*screen.width/563;
+		ctx.lineWidth="3";
+		ctx.strokeStyle="green";
+		ctx.beginPath(); 
+		ctx.moveTo(x1,y1);
+		ctx.lineTo(x2,y2);
+		ctx.stroke();
     }
     if(pos_x>88 && pos_x<190 && pos_y>354 && pos_y<440)
     {
-    	alert('Estacionamiento Case');
+    	//alert('Estacionamiento Case');
     }
     if(pos_x>212 && pos_x<343 && pos_y>385 && pos_y<443)
     {
-    	alert('Estacionamiento Auditorio');
+    	//alert('Estacionamiento Auditorio');
+
+    	ctx.clearRect(0, 0, c.width, c.height);
+    	var image2 = new Image();
+		image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+		
+		
+		
+		var x1=281*screen.width/563;
+		var x2=243*screen.width/563;
+		var y1=404*screen.width/563;
+		var y2=190*screen.width/563;
+		ctx.beginPath(); 
+		ctx.moveTo(x1,y1);
+		ctx.lineTo(x2,y2);
+		ctx.stroke();
+		
+		
     }
     if(pos_x>462 && pos_x<540 && pos_y>406 && pos_y<446)
     {
-    	alert('Estacionamiento Centro de Idiomas');
+    	//alert('Estacionamiento Centro de Idiomas');
     }
     if(pos_x>228 && pos_x<294 && pos_y>156 && pos_y<229)
     {
-    	alert('Aulas Moviles');
+    	//alert('Aulas Moviles');
     }   
     if(pos_x>202 && pos_x<238 && pos_y>264 && pos_y<311)
     {
-    	alert('Biblioteca');
+    	//alert('Biblioteca');
     }
     if(pos_x>310 && pos_x<375 && pos_y>356 && pos_y<385)
     {
-    	alert('Edificio Licenciatura');
+    	//alert('Edificio Licenciatura');
     }
     if(pos_x>408 && pos_x<448 && pos_y>328 && pos_y<358)
     {
-    	alert('CAT');
+    	//alert('CAT');
     }
     if(pos_x>300 && pos_x<344 && pos_y>272 && pos_y<305)
     {
-    	alert('Salas');
+    	//alert('Salas');
     }
     if(pos_x>453 && pos_x<539 && pos_y>363 && pos_y<396)
     {
-    	alert('Centro de idiomas');
+    	//alert('Centro de idiomas');
     }
     //alert("posx"+pos_x+","+"posy"+pos_y)
 }
