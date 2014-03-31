@@ -8,8 +8,7 @@
     <button class="btn-search"></button>
 
 <br><br>
-<div style="height:88%;width:100%;">
-
+<div style="height:88%;width:100%;" id="pointer_div" onclick="point_it(event)">
     <img id="map" src = "{{STATIC_URL}}img/croquisCetys.png" style="display:none;height:100%;width:100%;"></img>
 <canvas id="myCanvas" width="1500" height="1000"></canvas>
 <script>
@@ -21,13 +20,20 @@ var ctx=c.getContext("2d");
 var image2 = new Image();
 image2.src = "{{STATIC_URL}}img/croquisCetys.png";
 ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
-//var img=document.getElementById("map");
-//ctx.drawImage(img,0,0);
 ctx.moveTo(0,0);
 ctx.lineTo(200,100);
 ctx.stroke();
-
 </script>
-
+<script language="JavaScript">
+function point_it(event){
+    pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
+    pos_y = event.offsetY?(event.offsetY):event.pageY-document.getElementById("pointer_div").offsetTop;
+    document.getElementById("map").style.left = (pos_x-1) ;
+    document.getElementById("map").style.top = (pos_y-15) ;
+    document.getElementById("map").style.visibility = "visible" ;
+    
+    alert("posx"+pos_x+","+"posy"+pos_y)
+}
+</script>
 </div>
 {% endblock contenido %}
