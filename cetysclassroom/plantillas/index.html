@@ -48,6 +48,9 @@ function point_it(event){
     	var image2 = new Image();
 		image2.src = "{{STATIC_URL}}img/croquisCetys.png";
 		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
 		var x1=147*screen.width/563;
 		var x2=243*screen.width/563;
 		var y1=67*screen.width/563;
@@ -58,6 +61,7 @@ function point_it(event){
 		ctx.moveTo(x1,y1);
 		ctx.lineTo(x2,y2);
 		ctx.stroke();
+        
     }
     if(pos_x>88 && pos_x<190 && pos_y>354 && pos_y<440)
     {
@@ -71,7 +75,9 @@ function point_it(event){
     	var image2 = new Image();
 		image2.src = "{{STATIC_URL}}img/croquisCetys.png";
 		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
-		
+		var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
 		
 		
 		var x1=281*screen.width/563;
