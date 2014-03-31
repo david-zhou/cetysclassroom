@@ -24,6 +24,7 @@ ctx.moveTo(0,0);
 ctx.lineTo(200,100);
 ctx.stroke();
 </script>
+
 <script language="JavaScript">
 function point_it(event){
     pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
@@ -31,8 +32,55 @@ function point_it(event){
     document.getElementById("map").style.left = (pos_x-1) ;
     document.getElementById("map").style.top = (pos_y-15) ;
     document.getElementById("map").style.visibility = "visible" ;
-    
-    alert("posx"+pos_x+","+"posy"+pos_y)
+
+    pos_x = pos_x * 563 / screen.width;
+    pos_y = pos_y * 563 / screen.width;
+
+    if(pos_x>20 && pos_x<100 && pos_y>40 && pos_y<100)
+    {
+    	alert('Estacionamiento Gimnasio');
+    }
+    if(pos_x>115 && pos_x<185 && pos_y>40 && pos_y<100)
+    {
+    	alert('Estacionamiento Estadio');
+    }
+    if(pos_x>88 && pos_x<190 && pos_y>354 && pos_y<440)
+    {
+    	alert('Estacionamiento Case');
+    }
+    if(pos_x>212 && pos_x<343 && pos_y>385 && pos_y<443)
+    {
+    	alert('Estacionamiento Auditorio');
+    }
+    if(pos_x>462 && pos_x<540 && pos_y>406 && pos_y<446)
+    {
+    	alert('Estacionamiento Centro de Idiomas');
+    }
+    if(pos_x>228 && pos_x<294 && pos_y>156 && pos_y<229)
+    {
+    	alert('Aulas Moviles');
+    }   
+    if(pos_x>202 && pos_x<238 && pos_y>264 && pos_y<311)
+    {
+    	alert('Biblioteca');
+    }
+    if(pos_x>310 && pos_x<375 && pos_y>356 && pos_y<385)
+    {
+    	alert('Edificio Licenciatura');
+    }
+    if(pos_x>408 && pos_x<448 && pos_y>328 && pos_y<358)
+    {
+    	alert('CAT');
+    }
+    if(pos_x>300 && pos_x<344 && pos_y>272 && pos_y<305)
+    {
+    	alert('Salas');
+    }
+    if(pos_x>453 && pos_x<539 && pos_y>363 && pos_y<396)
+    {
+    	alert('Centro de idiomas');
+    }
+    //alert("posx"+pos_x+","+"posy"+pos_y)
 }
 </script>
 </div>
