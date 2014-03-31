@@ -7,18 +7,20 @@
     <input type = "text" placeholder="Search" id ="Search" style="height:100%;width:100%;font-size:100%"/>
     <button class="btn-search"></button>
 
-
+<br><br>
 <div style="height:88%;width:100%;">
 
     <img id="map" src = "{{STATIC_URL}}img/croquisCetys.png" style="display:none;height:100%;width:100%;"></img>
-<canvas id="myCanvas" width="1000" height="1000"></canvas>
+<canvas id="myCanvas" width="1500" height="1000"></canvas>
 <script>
 
 var c=document.getElementById("myCanvas");
+c.width = screen.width-15;
+c.height = screen.width*465/563;
 var ctx=c.getContext("2d");
 var image2 = new Image();
 image2.src = "{{STATIC_URL}}img/croquisCetys.png";
-ctx.drawImage(image2,10,10,1000,1000);
+ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
 //var img=document.getElementById("map");
 //ctx.drawImage(img,0,0);
 ctx.moveTo(0,0);
