@@ -1,0 +1,15 @@
+EstacionamientoGimnasio (20,40 | 20, 100 | 100, 40 | 100,100 )
+EstacionamientoEstadio (115,40 | 115,100 | 185,40 | 185,100)
+EstacionamientoCASE (88,354 | 88,410 | 190, 370 | 190, 440)
+EstacionamientoAuditorio (220,374 | 212,420 | 343,391 | 334, 443 )
+EstacionamientoIdiomas (462, 406 | 462,446 | 540,404 | 540, 443)
+
+AulasMoviles (228,156 | 228, 223 | 294, 156 | 294,229)
+Biblioteca (210, 264 | 202,305 | 238,267 | 231,311)
+EdificioLicenciatura (310,356 | 310,375 | 375,370 | 370, 385)
+Cafeteria(163,199 | 160,313 | 190,305 | 186,317)
+CAT (415,328 | 408,351 | 448,335 | 445,358)
+Salas(311,272 | 304,298 | 250,277 | 344,305)
+Idiomas(453,363 | 453,396 | 538,363 | 539,396)
+
+arriba-izq, abajo-izq, arriba-derecha, abajo-derecha
