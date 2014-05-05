@@ -41,6 +41,91 @@ function point_it(event){
     if(pos_x>20 && pos_x<100 && pos_y>40 && pos_y<100)
     {
     	//alert('Estacionamiento Gimnasio');
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
+        
+        ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+        //a las aulas moviles
+        var x1=56*screen.width/563;
+        var y1=59*screen.width/563;
+        var x2=56*screen.width/563;
+        var y2=96*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 98*screen.width/563;
+        y2 = 96*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 93*screen.width/563;
+        y2 = 91*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 93*screen.width/563;
+        y2 = 101*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 98*screen.width/563;
+        y2 = 96*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x1=113*screen.width/563;
+        y1=100*screen.width/563;
+        x2=213*screen.width/563;
+        y2=100*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 208*screen.width/563;
+        y2 = 95*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 208*screen.width/563;
+        y2 = 105*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 213*screen.width/563;
+        y2 = 100*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x1=213*screen.width/563;
+        y1=110*screen.width/563;
+        x2=213*screen.width/563;
+        y2=150*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 218*screen.width/563;
+        y2 = 145*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 208*screen.width/563;
+        y2 = 145*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 213*screen.width/563;
+        y2 = 150*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x1=220*screen.width/563;
+        y1=150*screen.width/563;
+        x2=247*screen.width/563;
+        y2=150*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 247*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 252*screen.width/563;
+        y2 = 185*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 242*screen.width/563;
+        y2 = 185*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 247*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2);
+        //termina aulas moviles
+
+        ctx.stroke();
+        
     }
     if(pos_x>115 && pos_x<185 && pos_y>40 && pos_y<100)
     {
@@ -56,6 +141,7 @@ function point_it(event){
 		ctx.strokeStyle="red";
 		ctx.beginPath(); 
 
+        //a las aulas moviles
         var x1=145*screen.width/563;
         var y1=65*screen.width/563;
         var x2=145*screen.width/563;
@@ -109,7 +195,7 @@ function point_it(event){
         x2 = 247*screen.width/563;
         y2 = 190*screen.width/563;
         ctx.lineTo(x2,y2);
-
+        //termina aulas moviles
 
 		ctx.stroke();
         
@@ -117,6 +203,88 @@ function point_it(event){
     if(pos_x>88 && pos_x<190 && pos_y>354 && pos_y<440)
     {
     	//alert('Estacionamiento Case');
+        ctx.clearRect(0, 0, c.width, c.height);
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
+        ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+        //a las aulas moviles
+        var x1=138*screen.width/563;
+        var y1=390*screen.width/563;
+        var x2=209*screen.width/563;
+        var y2=390*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 204*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 204*screen.width/563;
+        y2 = 395*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 209*screen.width/563;
+        y2 = 390*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x1 = 212*screen.width/563;
+        y1 = 385*screen.width/563;
+        x2 = 222*screen.width/563;
+        y2 = 313*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 227*screen.width/563;
+        y2 = 318*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 217*screen.width/563;
+        y2 = 318*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 222*screen.width/563;
+        y2 = 313*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x1 = 240*screen.width/563;
+        y1 = 305*screen.width/563;
+        x2 = 261*screen.width/563;
+        y2 = 297*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 269*screen.width/563;
+        y2 = 250*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 274*screen.width/563;
+        y2 = 255*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 264*screen.width/563;
+        y2 = 255*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 269*screen.width/563;
+        y2 = 250*screen.width/563;
+        ctx.lineTo(x2,y2);   
+
+        x1 = 270*screen.width/563;
+        y1 = 234*screen.width/563;
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 253*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 243*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2); 
+        //aulas moviles
+
+        ctx.stroke();
+
     }
     if(pos_x>212 && pos_x<343 && pos_y>385 && pos_y<443)
     {
@@ -129,8 +297,12 @@ function point_it(event){
 		var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
         ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
-		
-		
+		ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+
+		//aulas moviles
 		var x1=281*screen.width/563;
 		var x2=243*screen.width/563;
 		var y1=404*screen.width/563;
@@ -139,9 +311,6 @@ function point_it(event){
         y1 = 404*screen.width/563;
         x2 = 211*screen.width/563;
         y2 = 403*screen.width/563;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
-		ctx.beginPath(); 
 		
         ctx.moveTo(x1,y1);
 		ctx.lineTo(x2,y2);
@@ -205,6 +374,8 @@ function point_it(event){
         x2 = 248*screen.width/563;
         y2 = 190*screen.width/563;
         ctx.lineTo(x2,y2); 
+        //aulas moviles
+
 		ctx.stroke();
 		
 		
@@ -212,6 +383,120 @@ function point_it(event){
     if(pos_x>462 && pos_x<540 && pos_y>406 && pos_y<446)
     {
     	//alert('Estacionamiento Centro de Idiomas');
+        ctx.clearRect(0, 0, c.width, c.height);
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
+        ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+        var x1=281*screen.width/563;
+        var x2=243*screen.width/563;
+        var y1=404*screen.width/563;
+        var y2=190*screen.width/563;
+
+        x1 = 490*screen.width/563;
+        y1 = 423*screen.width/563;
+        x2 = 490*screen.width/563;
+        y2 = 400*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 450*screen.width/563;
+        y2 = 400*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 450*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 445*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 450*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2); 
+
+        x1 = 450*screen.width/563;
+        y1 = 370*screen.width/563;
+        x2 = 360*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 365*screen.width/563;
+        y2 = 355*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 365*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 360*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2); 
+
+        x1 = 350*screen.width/563;
+        y1 = 360*screen.width/563;
+        x2 = 352*screen.width/563;
+        y2 = 292*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 340*screen.width/563;
+        y2 = 290*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 345*screen.width/563;
+        y2 = 285*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 345*screen.width/563;
+        y2 = 295*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 340*screen.width/563;
+        y2 = 290*screen.width/563;
+        ctx.lineTo(x2,y2); 
+
+        x1 = 322*screen.width/563;
+        y1 = 289*screen.width/563;
+        x2 = 322*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 297*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 287*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);   
+
+        x1 = 280*screen.width/563;
+        y1 = 234*screen.width/563;
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 253*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 243*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2); 
+        //aulas moviles
+
+        ctx.stroke();
+
     }
     if(pos_x>228 && pos_x<294 && pos_y>156 && pos_y<229)
     {
@@ -220,22 +505,399 @@ function point_it(event){
     if(pos_x>202 && pos_x<238 && pos_y>264 && pos_y<311)
     {
     	//alert('Biblioteca');
+
+        ctx.clearRect(0, 0, c.width, c.height);
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
+        ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+        //aulas moviles
+        var x1=281*screen.width/563;
+        var x2=243*screen.width/563;
+        var y1=404*screen.width/563;
+        var y2=190*screen.width/563;
+
+        x1 = 240*screen.width/563;
+        y1 = 305*screen.width/563;
+        x2 = 261*screen.width/563;
+        y2 = 297*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 269*screen.width/563;
+        y2 = 250*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 274*screen.width/563;
+        y2 = 255*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 264*screen.width/563;
+        y2 = 255*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 269*screen.width/563;
+        y2 = 250*screen.width/563;
+        ctx.lineTo(x2,y2);   
+
+        x1 = 270*screen.width/563;
+        y1 = 234*screen.width/563;
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 253*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 243*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2); 
+        //aulas moviles
+
+        ctx.stroke();
     }
     if(pos_x>310 && pos_x<375 && pos_y>356 && pos_y<385)
     {
     	//alert('Edificio Licenciatura');
+
+        ctx.clearRect(0, 0, c.width, c.height);
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
+        ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+        var x1=281*screen.width/563;
+        var x2=243*screen.width/563;
+        var y1=404*screen.width/563;
+        var y2=190*screen.width/563;
+
+        x1 = 350*screen.width/563;
+        y1 = 360*screen.width/563;
+        x2 = 352*screen.width/563;
+        y2 = 292*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 340*screen.width/563;
+        y2 = 290*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 345*screen.width/563;
+        y2 = 285*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 345*screen.width/563;
+        y2 = 295*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 340*screen.width/563;
+        y2 = 290*screen.width/563;
+        ctx.lineTo(x2,y2); 
+
+        x1 = 322*screen.width/563;
+        y1 = 289*screen.width/563;
+        x2 = 322*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 297*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 287*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);   
+
+        x1 = 280*screen.width/563;
+        y1 = 234*screen.width/563;
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 253*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 243*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2); 
+        //aulas moviles
+
+        ctx.stroke();
     }
     if(pos_x>408 && pos_x<448 && pos_y>328 && pos_y<358)
     {
     	//alert('CAT');
+
+        ctx.clearRect(0, 0, c.width, c.height);
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
+        ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+        var x1=281*screen.width/563;
+        var x2=243*screen.width/563;
+        var y1=404*screen.width/563;
+        var y2=190*screen.width/563;
+
+        x1 = 432*screen.width/563;
+        y1 = 357*screen.width/563;
+        x2 = 432*screen.width/563;
+        y2 = 371*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 360*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 365*screen.width/563;
+        y2 = 355*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 365*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 360*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2); 
+
+        x1 = 350*screen.width/563;
+        y1 = 360*screen.width/563;
+        x2 = 352*screen.width/563;
+        y2 = 292*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 340*screen.width/563;
+        y2 = 290*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 345*screen.width/563;
+        y2 = 285*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 345*screen.width/563;
+        y2 = 295*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 340*screen.width/563;
+        y2 = 290*screen.width/563;
+        ctx.lineTo(x2,y2); 
+
+        x1 = 322*screen.width/563;
+        y1 = 289*screen.width/563;
+        x2 = 322*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 297*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 287*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);   
+
+        x1 = 280*screen.width/563;
+        y1 = 234*screen.width/563;
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 253*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 243*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2); 
+        //aulas moviles
+
+        ctx.stroke();
     }
     if(pos_x>300 && pos_x<344 && pos_y>272 && pos_y<305)
     {
     	//alert('Salas');
+
+        ctx.clearRect(0, 0, c.width, c.height);
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
+        ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+        var x1=281*screen.width/563;
+        var x2=243*screen.width/563;
+        var y1=404*screen.width/563;
+        var y2=190*screen.width/563;
+
+        x1 = 322*screen.width/563;
+        y1 = 289*screen.width/563;
+        x2 = 322*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 297*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 287*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);   
+
+        x1 = 280*screen.width/563;
+        y1 = 234*screen.width/563;
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 253*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 243*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2); 
+        //aulas moviles
+
+        ctx.stroke();
     }
     if(pos_x>453 && pos_x<539 && pos_y>363 && pos_y<396)
     {
     	//alert('Centro de idiomas');
+
+        ctx.clearRect(0, 0, c.width, c.height);
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,268*screen.width/563,156*screen.width/563,30,70);
+        ctx.lineWidth="3";
+        ctx.strokeStyle="red";
+        ctx.beginPath(); 
+
+        var x1=281*screen.width/563;
+        var x2=243*screen.width/563;
+        var y1=404*screen.width/563;
+        var y2=190*screen.width/563; 
+
+        x1 = 450*screen.width/563;
+        y1 = 370*screen.width/563;
+        x2 = 360*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 365*screen.width/563;
+        y2 = 355*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 365*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 360*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2); 
+
+        x1 = 350*screen.width/563;
+        y1 = 360*screen.width/563;
+        x2 = 352*screen.width/563;
+        y2 = 292*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 340*screen.width/563;
+        y2 = 290*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 345*screen.width/563;
+        y2 = 285*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 345*screen.width/563;
+        y2 = 295*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 340*screen.width/563;
+        y2 = 290*screen.width/563;
+        ctx.lineTo(x2,y2); 
+
+        x1 = 322*screen.width/563;
+        y1 = 289*screen.width/563;
+        x2 = 322*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 268*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 297*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 287*screen.width/563;
+        y2 = 252*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 292*screen.width/563;
+        y2 = 247*screen.width/563;
+        ctx.lineTo(x2,y2);   
+
+        x1 = 280*screen.width/563;
+        y1 = 234*screen.width/563;
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        x2 = 253*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 243*screen.width/563;
+        y2 = 195*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 248*screen.width/563;
+        y2 = 190*screen.width/563;
+        ctx.lineTo(x2,y2); 
+        //aulas moviles
+
+        ctx.stroke();
+
+  
     }
     //alert("posx"+pos_x+","+"posy"+pos_y)
 }
