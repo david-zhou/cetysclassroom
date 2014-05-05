@@ -8,5 +8,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'cetysclassroom.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 	url(r'^$','classrooms.views.v_index'),
+	url(r'^(?P<Classroom>\w+)?$','classrooms.views.v_classroom'),
     url(r'^admin/', include(admin.site.urls)),
 )

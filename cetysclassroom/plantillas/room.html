@@ -1,0 +1,12 @@
+{% extends "Base.html" %}
+
+{% block titulo %} Cetys Universidad  {% endblock titulo %}
+
+{% block contenido %}
+<a href ="/">
+<button href="/">
+    <i class="icon-arrow-left-3"></i>
+</button>
+</a>
+<img id="map" src = "{{STATIC_URL}}img/{{roomNumber}}.jpg"></img>
+{% endblock contenido %}
