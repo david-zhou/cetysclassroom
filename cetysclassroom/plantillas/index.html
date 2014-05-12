@@ -4,12 +4,14 @@
 
 {% block contenido %}
 <div class = "input-control text" style="height:4%;width:100%;">
-    <input type = "text" placeholder="Search" id ="Search" style="height:100%;width:100%;font-size:100%"/>
+    <input type = "text" placeholder="Ingrese el nombre del salón a donde quiere ir" id ="Search" style="height:100%;width:100%;font-size:100%"/>
     <button class="btn-search"></button>
 
 <br><br>
+Seleccione el punto más cercano a su ubicación
+<br><br>
 <div style="height:88%;width:100%;" id="pointer_div" onclick="point_it(event)">
-    <img id="map" src = "{{STATIC_URL}}img/croquisCetys.png" style="display:none;height:100%;width:100%;"></img>
+    <img id="map" src = "{{STATIC_URL}}img/croquisCetysNames.png" style="display:none;height:100%;width:100%;"></img>
 <canvas id="myCanvas" width="1500" height="1000"></canvas>
 <script>
 
@@ -18,7 +20,7 @@ c.width = screen.width-15;
 c.height = screen.width*465/563;
 var ctx=c.getContext("2d");
 var image2 = new Image();
-image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
 ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
 </script>
 
@@ -49,7 +51,7 @@ function point_it(event){
     {
     	//alert('Estacionamiento Gimnasio');
         var image2 = new Image();
-        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -141,7 +143,7 @@ function point_it(event){
     {
     	//alert('Estacionamiento Estadio');
     	var image2 = new Image();
-		image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+		image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
 		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -218,7 +220,7 @@ function point_it(event){
     	//alert('Estacionamiento Case');
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
-        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -309,7 +311,7 @@ function point_it(event){
 
     	ctx.clearRect(0, 0, c.width, c.height);
     	var image2 = new Image();
-		image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+		image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
 		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
 		var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -406,7 +408,7 @@ function point_it(event){
     	//alert('Estacionamiento Centro de Idiomas');
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
-        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -533,7 +535,7 @@ function point_it(event){
 
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
-        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -596,7 +598,7 @@ function point_it(event){
 
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
-        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -680,7 +682,7 @@ function point_it(event){
 
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
-        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -783,7 +785,7 @@ function point_it(event){
 
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
-        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
@@ -848,7 +850,7 @@ function point_it(event){
 
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
-        image2.src = "{{STATIC_URL}}img/croquisCetys.png";
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
