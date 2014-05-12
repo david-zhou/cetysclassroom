@@ -10,5 +10,6 @@ urlpatterns = patterns('',
 	url(r'^$','classrooms.views.v_index'),
 	# url(r'^(?P<Classroom>\w+)?$','classrooms.views.v_classroom'),
 	url(r'^(?P<numero>\w+)?$','classrooms.views.v_search'),
+	url(r'^(?P<salon>\w+)?\+?(?P<RP>\w+)?\+?(?P<X>\w+)?\+?(?P<Y>\w+)?$','classrooms.views.v_index2'),
     url(r'^admin/', include(admin.site.urls)),
 )
