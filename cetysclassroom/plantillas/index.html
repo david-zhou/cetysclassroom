@@ -5,8 +5,12 @@
 {% block contenido %}
 <div class = "input-control text" style="height:4%;width:100%;">
     <input type = "text" placeholder="Ingrese el nombre del salón a donde quiere ir" id ="Search" style="height:100%;width:100%;font-size:100%"/>
-    <button class="btn-search"></button>
+    <button class="btn-search" onclick="func()"></button>
+{% for s in salon%}
+{{s.NAME}},{{s.RP}}<br>
+{% empty %}
 
+{% endfor %}
 <br><br>
 Seleccione el punto más cercano a su ubicación
 <br><br>
@@ -29,6 +33,13 @@ var markerXTop = 0;
 var markerXBot = 0;
 var markerYTop = 0;
 var markerYBot = 0;
+function func()
+{
+    var search = document.getElementById("Search").value;
+    //alert(search);
+    window.location.href=search;
+    
+}
 function point_it(event){
     pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
     pos_y = event.offsetY?(event.offsetY):event.pageY-document.getElementById("pointer_div").offsetTop;
