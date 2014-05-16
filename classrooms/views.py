@@ -13,8 +13,8 @@ def v_index(request):
 def v_index2(request, salon, RP, X, Y):
 	return render_to_response("index.html", {"numero":salon, "RP":RP, "X":X, "Y":Y}, context_instance = RequestContext(request))
 
-def v_classroom(request,Classroom):
-	return render_to_response("room.html", {"roomNumber":Classroom}, context_instance = RequestContext(request))
+def v_classroom(request,Classroom,RP,X,Y):
+	return render_to_response("room.html", {"roomNumber":Classroom, "RP":RP, "X":X, "Y":Y}, context_instance = RequestContext(request))
 
 def v_search(request,numero):
 	salon = Classroom.objects.raw("select C.id, classroom_coordx as X, classroom_coordy as Y, classroom_name as NAME, classroom_ReferencePoint as RP from classrooms_classroom AS C where C.classroom_Name = '"+numero+"'")

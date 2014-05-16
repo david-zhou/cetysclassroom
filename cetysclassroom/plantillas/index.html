@@ -57,7 +57,7 @@ function point_it(event){
     if(pos_x>markerXTop && pos_x<markerXBot && pos_y>markerYTop && pos_y<markerYBot)
     {
             var roomNumber="{{numero}}";
-            window.location.href=roomNumber;
+            window.location.href="Classroom/"+roomNumber+"+{{RP}}+{{X}}+{{Y}}";
     }
     if(pos_x>20 && pos_x<100 && pos_y>40 && pos_y<100)
     {
