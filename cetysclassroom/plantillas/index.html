@@ -53,10 +53,7 @@ function point_it(event){
     var c=document.getElementById("myCanvas");
 	var ctx=c.getContext("2d");
 	ctx.save();
-    markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = markerXTop + 30;
-    markerYBot = markerYTop + 70;
+    
     if(pos_x>markerXTop && pos_x<markerXBot && pos_y>markerYTop && pos_y<markerYBot)
     {
             var roomNumber="{{numero}}";
@@ -65,25 +62,31 @@ function point_it(event){
     if(pos_x>20 && pos_x<100 && pos_y>40 && pos_y<100)
     {
     	//alert('Estacionamiento Gimnasio');
+        //alert("xtop:"+markerXTop+" xbottom"+markerXBot+"ytop:"+markerYTop+" ybottom"+markerYBot)
+        markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+    ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
         
         //a las aulas moviles
         if( rp == "3")
         {
         var x1=56*screen.width/563;
-        var y1=59*screen.width/563;
+        var y1=79*screen.width/563;
         var x2=56*screen.width/563;
         var y2=96*screen.width/563;
         ctx.moveTo(x1,y1);
@@ -91,93 +94,111 @@ function point_it(event){
         x2 = 98*screen.width/563;
         y2 = 96*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 93*screen.width/563;
-        y2 = 91*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 93*screen.width/563;
-        y2 = 101*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 98*screen.width/563;
-        y2 = 96*screen.width/563;
-        ctx.lineTo(x2,y2);
-
+        
         x1=113*screen.width/563;
         y1=100*screen.width/563;
+        ctx.lineTo(x1,y1);
         x2=213*screen.width/563;
         y2=100*screen.width/563;
-        ctx.moveTo(x1,y1);
-        ctx.lineTo(x2,y2);
-        x2 = 208*screen.width/563;
-        y2 = 95*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 208*screen.width/563;
-        y2 = 105*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 213*screen.width/563;
-        y2 = 100*screen.width/563;
         ctx.lineTo(x2,y2);
 
         x1=213*screen.width/563;
         y1=110*screen.width/563;
         x2=213*screen.width/563;
         y2=150*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 218*screen.width/563;
-        y2 = 145*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 208*screen.width/563;
-        y2 = 145*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 213*screen.width/563;
-        y2 = 150*screen.width/563;
-        ctx.lineTo(x2,y2);
-
+        
         x1=220*screen.width/563;
         y1=150*screen.width/563;
         x2=247*screen.width/563;
         y2=150*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 247*screen.width/563;
-        y2 = 190*screen.width/563;
+        y2 = 180*screen.width/563;
         ctx.lineTo(x2,y2);
         x2 = 252*screen.width/563;
-        y2 = 185*screen.width/563;
+        y2 = 175*screen.width/563;
         ctx.lineTo(x2,y2);
         x2 = 242*screen.width/563;
-        y2 = 185*screen.width/563;
+        y2 = 175*screen.width/563;
         ctx.lineTo(x2,y2);
         x2 = 247*screen.width/563;
-        y2 = 190*screen.width/563;
+        y2 = 180*screen.width/563;
         ctx.lineTo(x2,y2);
         //termina aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=56*screen.width/563;
+        var y1=79*screen.width/563;
+        var x2=56*screen.width/563;
+        var y2=96*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 113*screen.width/563;
+        y2 = 96*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 113*screen.width/563;
+        y2 = 284*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 200*screen.width/563;
+        y2 = 303*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 224*screen.width/563;
+        y2 = 340*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 335*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 325*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
         ctx.stroke();
         
     }
     if(pos_x>115 && pos_x<185 && pos_y>40 && pos_y<100)
     {
     	//alert('Estacionamiento Estadio');
+        markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+    ctx.clearRect(0, 0, c.width, c.height);
     	var image2 = new Image();
 		image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
 		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-		ctx.lineWidth="3";
-		ctx.strokeStyle="red";
+		ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
 		ctx.beginPath(); 
 
         //a las aulas moviles
         if(rp == "3")
         {
         var x1=145*screen.width/563;
-        var y1=65*screen.width/563;
+        var y1=82*screen.width/563;
         var x2=145*screen.width/563;
         var y2=100*screen.width/563;
 		ctx.moveTo(x1,y1);
@@ -185,52 +206,74 @@ function point_it(event){
         x2 = 213*screen.width/563;
         y2 = 100*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 208*screen.width/563;
-        y2 = 95*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 208*screen.width/563;
-        y2 = 105*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 213*screen.width/563;
-        y2 = 100*screen.width/563;
-        ctx.lineTo(x2,y2);
-
+        
         x1=213*screen.width/563;
         y1=110*screen.width/563;
         x2=213*screen.width/563;
         y2=150*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 218*screen.width/563;
-        y2 = 145*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 208*screen.width/563;
-        y2 = 145*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 213*screen.width/563;
-        y2 = 150*screen.width/563;
-        ctx.lineTo(x2,y2);
-
+        
         x1=220*screen.width/563;
         y1=150*screen.width/563;
         x2=247*screen.width/563;
         y2=150*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 247*screen.width/563;
-        y2 = 190*screen.width/563;
+        y2 = 180*screen.width/563;
         ctx.lineTo(x2,y2);
         x2 = 252*screen.width/563;
-        y2 = 185*screen.width/563;
+        y2 = 175*screen.width/563;
         ctx.lineTo(x2,y2);
         x2 = 242*screen.width/563;
-        y2 = 185*screen.width/563;
+        y2 = 175*screen.width/563;
         ctx.lineTo(x2,y2);
         x2 = 247*screen.width/563;
-        y2 = 190*screen.width/563;
+        y2 = 180*screen.width/563;
         ctx.lineTo(x2,y2);
         //termina aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=150*screen.width/563;
+        var y1=80*screen.width/563;
+        var x2=150*screen.width/563;
+        var y2=100*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 113*screen.width/563;
+        y2 = 100*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 113*screen.width/563;
+        y2 = 284*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 200*screen.width/563;
+        y2 = 303*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 224*screen.width/563;
+        y2 = 340*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 335*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 325*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
 
 		ctx.stroke();
         
@@ -238,19 +281,23 @@ function point_it(event){
     if(pos_x>88 && pos_x<190 && pos_y>354 && pos_y<440)
     {
     	//alert('Estacionamiento Case');
+        markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
 
         //a las aulas moviles
@@ -262,68 +309,79 @@ function point_it(event){
         var y2=390*screen.width/563;
         ctx.moveTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 204*screen.width/563;
-        y2 = 385*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 204*screen.width/563;
-        y2 = 395*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 209*screen.width/563;
-        y2 = 390*screen.width/563;
-        ctx.lineTo(x2,y2);
-
+        
         x1 = 212*screen.width/563;
         y1 = 385*screen.width/563;
         x2 = 222*screen.width/563;
         y2 = 313*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 227*screen.width/563;
-        y2 = 318*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 217*screen.width/563;
-        y2 = 318*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 222*screen.width/563;
-        y2 = 313*screen.width/563;
-        ctx.lineTo(x2,y2);
-
+        
         x1 = 240*screen.width/563;
         y1 = 305*screen.width/563;
         x2 = 261*screen.width/563;
         y2 = 297*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 269*screen.width/563;
         y2 = 250*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 274*screen.width/563;
-        y2 = 255*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 264*screen.width/563;
-        y2 = 255*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 269*screen.width/563;
-        y2 = 250*screen.width/563;
-        ctx.lineTo(x2,y2);   
-
+        
         x1 = 270*screen.width/563;
         y1 = 234*screen.width/563;
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.moveTo(x1,y1);
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 253*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 275*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 243*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 265*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
         ctx.lineTo(x2,y2); 
         //aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=138*screen.width/563;
+        var y1=390*screen.width/563;
+        var x2=150*screen.width/563;
+        var y2=363*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 200*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 208*screen.width/563;
+        y2 = 337*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x2 = 224*screen.width/563;
+        y2 = 340*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 335*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 325*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
 
         ctx.stroke();
 
@@ -331,21 +389,24 @@ function point_it(event){
     if(pos_x>212 && pos_x<343 && pos_y>385 && pos_y<443)
     {
     	//alert('Estacionamiento Auditorio');
-
+markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
     	ctx.clearRect(0, 0, c.width, c.height);
     	var image2 = new Image();
 		image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
 		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
 		var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
         
-		ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+		ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
 
         if(rp == "3")
@@ -361,69 +422,67 @@ function point_it(event){
         y2 = 403*screen.width/563;
 		
         ctx.moveTo(x1,y1);
-		ctx.lineTo(x2,y2);
-        x2 = 215*screen.width/563;
-        y2 = 398*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 215*screen.width/563;
-        y2 = 408*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 211*screen.width/563;
-        y2 = 403*screen.width/563;
-        ctx.lineTo(x2,y2);
-
+		        
         x1 = 212*screen.width/563;
         y1 = 385*screen.width/563;
         x2 = 222*screen.width/563;
         y2 = 313*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 227*screen.width/563;
-        y2 = 318*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 217*screen.width/563;
-        y2 = 318*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 222*screen.width/563;
-        y2 = 313*screen.width/563;
-        ctx.lineTo(x2,y2);
-
+        
         x1 = 240*screen.width/563;
         y1 = 305*screen.width/563;
         x2 = 261*screen.width/563;
         y2 = 297*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 269*screen.width/563;
         y2 = 250*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 274*screen.width/563;
-        y2 = 255*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 264*screen.width/563;
-        y2 = 255*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 269*screen.width/563;
-        y2 = 250*screen.width/563;
-        ctx.lineTo(x2,y2);   
-
+        
         x1 = 270*screen.width/563;
         y1 = 234*screen.width/563;
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.moveTo(x1,y1);
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 253*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 275*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 243*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 265*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.lineTo(x2,y2); 
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x2,y2);
         //aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=285*screen.width/563;
+        var y1=405*screen.width/563;
+        var x2=323*screen.width/563;
+        var y2=405*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 323*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 328*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 318*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 323*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
 
 		ctx.stroke();
 		
@@ -432,19 +491,23 @@ function point_it(event){
     if(pos_x>462 && pos_x<540 && pos_y>406 && pos_y<446)
     {
     	//alert('Estacionamiento Centro de Idiomas');
+        markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
 
         if(rp == "3")
@@ -458,7 +521,7 @@ function point_it(event){
         y1 = 423*screen.width/563;
         x2 = 490*screen.width/563;
         y2 = 400*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 450*screen.width/563;
         y2 = 400*screen.width/563;
@@ -466,56 +529,29 @@ function point_it(event){
         x2 = 450*screen.width/563;
         y2 = 375*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 455*screen.width/563;
-        y2 = 380*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 445*screen.width/563;
-        y2 = 380*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 450*screen.width/563;
-        y2 = 375*screen.width/563;
-        ctx.lineTo(x2,y2); 
-
+        
         x1 = 450*screen.width/563;
         y1 = 370*screen.width/563;
         x2 = 360*screen.width/563;
         y2 = 360*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 365*screen.width/563;
-        y2 = 355*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 365*screen.width/563;
-        y2 = 365*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 360*screen.width/563;
-        y2 = 360*screen.width/563;
-        ctx.lineTo(x2,y2); 
-
+        
         x1 = 350*screen.width/563;
         y1 = 360*screen.width/563;
         x2 = 352*screen.width/563;
         y2 = 292*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 340*screen.width/563;
         y2 = 290*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 345*screen.width/563;
-        y2 = 285*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 345*screen.width/563;
-        y2 = 295*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 340*screen.width/563;
-        y2 = 290*screen.width/563;
-        ctx.lineTo(x2,y2); 
-
+        
         x1 = 322*screen.width/563;
         y1 = 289*screen.width/563;
         x2 = 322*screen.width/563;
         y2 = 268*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 292*screen.width/563;
         y2 = 268*screen.width/563;
@@ -523,33 +559,59 @@ function point_it(event){
         x2 = 292*screen.width/563;
         y2 = 247*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 297*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 287*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 292*screen.width/563;
-        y2 = 247*screen.width/563;
-        ctx.lineTo(x2,y2);   
 
-        x1 = 280*screen.width/563;
+        x1 = 270*screen.width/563;
         y1 = 234*screen.width/563;
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.moveTo(x1,y1);
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 253*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 275*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 243*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 265*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
         ctx.lineTo(x2,y2); 
         //aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=490*screen.width/563;
+        var y1=423*screen.width/563;
+        var x2=490*screen.width/563;
+        var y2=400*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 450*screen.width/563;
+        y2 = 400*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 450*screen.width/563;
+        y2 = 379*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x2 = 330*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 335*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 325*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
 
         ctx.stroke();
 
@@ -557,90 +619,183 @@ function point_it(event){
     if(pos_x>228 && pos_x<294 && pos_y>156 && pos_y<229)
     {
     	//alert('Aulas Moviles');
-    }   
-    if(pos_x>202 && pos_x<238 && pos_y>264 && pos_y<311)
-    {
-    	//alert('Biblioteca');
-
+        markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-       ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
+        ctx.beginPath(); 
+
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=271*screen.width/563;
+        var y1=206*screen.width/563;
+        var x2=271*screen.width/563;
+        var y2=250*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 297*screen.width/563;
+        y2 = 256*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 295*screen.width/563;
+        y2 = 267*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 325*screen.width/563;
+        y2 = 272*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 323*screen.width/563;
+        y2 = 289*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 358*screen.width/563;
+        y2 = 294*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 346*screen.width/563;
+        y2 = 362*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x2 = 346*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 351*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 341*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 346*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
+
+        ctx.stroke();
+    }   
+    if(pos_x>202 && pos_x<238 && pos_y>264 && pos_y<311)
+    {
+    	//alert('Biblioteca');
+markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        ctx.clearRect(0, 0, c.width, c.height);
+        var image2 = new Image();
+        image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
+        ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
+        var image3 = new Image();
+        image3.src = "{{STATIC_URL}}img/marker.png";
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
+        //markerXTop = 268;
+        //markerYTop = 156;
+        //markerXBot = 268 + 30;
+        //markerYBot = 156 + 70;
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
 
         //aulas moviles
         if(rp =="3")
         {
-        var x1=281*screen.width/563;
+        var x1=217*screen.width/563;
         var x2=243*screen.width/563;
-        var y1=404*screen.width/563;
+        var y1=312*screen.width/563;
         var y2=190*screen.width/563;
 
-        x1 = 240*screen.width/563;
-        y1 = 305*screen.width/563;
+        ctx.moveTo(x1,y1);
+        x1 = 230*screen.width/563;
+        y1 = 315*screen.width/563;
         x2 = 261*screen.width/563;
         y2 = 297*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 269*screen.width/563;
         y2 = 250*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 274*screen.width/563;
-        y2 = 255*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 264*screen.width/563;
-        y2 = 255*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 269*screen.width/563;
-        y2 = 250*screen.width/563;
-        ctx.lineTo(x2,y2);   
-
+        
         x1 = 270*screen.width/563;
         y1 = 234*screen.width/563;
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.moveTo(x1,y1);
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 253*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 275*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 243*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 265*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
         ctx.lineTo(x2,y2); 
         //aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=228*screen.width/563;
+        var x2=223*screen.width/563;
+        var y1=313*screen.width/563;
+        var y2=340*screen.width/563;
+
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 351*screen.width/563;
+        y2 = 362*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 351*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 356*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 346*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 351*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
 
         ctx.stroke();
     }
     if(pos_x>310 && pos_x<375 && pos_y>356 && pos_y<385)
     {
     	//alert('Edificio Licenciatura');
-
+markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
 
         if(rp =="3")
@@ -659,21 +814,12 @@ function point_it(event){
         x2 = 340*screen.width/563;
         y2 = 290*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 345*screen.width/563;
-        y2 = 285*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 345*screen.width/563;
-        y2 = 295*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 340*screen.width/563;
-        y2 = 290*screen.width/563;
-        ctx.lineTo(x2,y2); 
 
         x1 = 322*screen.width/563;
         y1 = 289*screen.width/563;
         x2 = 322*screen.width/563;
         y2 = 268*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 292*screen.width/563;
         y2 = 268*screen.width/563;
@@ -681,30 +827,21 @@ function point_it(event){
         x2 = 292*screen.width/563;
         y2 = 247*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 297*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 287*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 292*screen.width/563;
-        y2 = 247*screen.width/563;
-        ctx.lineTo(x2,y2);   
-
-        x1 = 280*screen.width/563;
+        
+        x1 = 270*screen.width/563;
         y1 = 234*screen.width/563;
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.moveTo(x1,y1);
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 253*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 275*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 243*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 265*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
         ctx.lineTo(x2,y2); 
         //aulas moviles
         }
@@ -714,20 +851,23 @@ function point_it(event){
     if(pos_x>408 && pos_x<448 && pos_y>328 && pos_y<358)
     {
     	//alert('CAT');
-
+markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
 
         if(rp=="3")
@@ -746,40 +886,22 @@ function point_it(event){
         x2 = 360*screen.width/563;
         y2 = 360*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 365*screen.width/563;
-        y2 = 355*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 365*screen.width/563;
-        y2 = 365*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 360*screen.width/563;
-        y2 = 360*screen.width/563;
-        ctx.lineTo(x2,y2); 
-
+        
         x1 = 350*screen.width/563;
         y1 = 360*screen.width/563;
         x2 = 352*screen.width/563;
         y2 = 292*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 340*screen.width/563;
         y2 = 290*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 345*screen.width/563;
-        y2 = 285*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 345*screen.width/563;
-        y2 = 295*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 340*screen.width/563;
-        y2 = 290*screen.width/563;
-        ctx.lineTo(x2,y2); 
-
+        
         x1 = 322*screen.width/563;
         y1 = 289*screen.width/563;
         x2 = 322*screen.width/563;
         y2 = 268*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 292*screen.width/563;
         y2 = 268*screen.width/563;
@@ -787,53 +909,77 @@ function point_it(event){
         x2 = 292*screen.width/563;
         y2 = 247*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 297*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 287*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 292*screen.width/563;
-        y2 = 247*screen.width/563;
-        ctx.lineTo(x2,y2);   
-
-        x1 = 280*screen.width/563;
+        
+        x1 = 270*screen.width/563;
         y1 = 234*screen.width/563;
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.moveTo(x1,y1);
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 253*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 275*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 243*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 265*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.lineTo(x2,y2); 
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x2,y2);  
         //aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=431*screen.width/563;
+        var x2=430*screen.width/563;
+        var y1=359*screen.width/563;
+        var y2=375*screen.width/563;
+
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 351*screen.width/563;
+        y2 = 362*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 351*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 356*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 346*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 351*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
 
         ctx.stroke();
     }
     if(pos_x>300 && pos_x<344 && pos_y>272 && pos_y<305)
     {
     	//alert('Salas');
-
+markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
 
         if(rp=="3")
@@ -855,53 +1001,80 @@ function point_it(event){
         x2 = 292*screen.width/563;
         y2 = 247*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 297*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 287*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 292*screen.width/563;
-        y2 = 247*screen.width/563;
-        ctx.lineTo(x2,y2);   
-
-        x1 = 280*screen.width/563;
+        
+        x1 = 270*screen.width/563;
         y1 = 234*screen.width/563;
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.moveTo(x1,y1);
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 253*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 275*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 243*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 265*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
         ctx.lineTo(x2,y2); 
         //aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=271*screen.width/563;
+        var y1=206*screen.width/563;
+        var x2=271*screen.width/563;
+        var y2=250*screen.width/563;
+        
+        x2 = 323*screen.width/563;
+        y2 = 289*screen.width/563;
+        ctx.moveTo(x2,y2);
+        x2 = 358*screen.width/563;
+        y2 = 294*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 346*screen.width/563;
+        y2 = 362*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x2 = 346*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 351*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 341*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 346*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
 
         ctx.stroke();
     }
     if(pos_x>453 && pos_x<539 && pos_y>363 && pos_y<396)
     {
     	//alert('Centro de idiomas');
-
+markerXTop = "{{X}}";
+    markerYTop = "{{Y}}";
+    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
+    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
         var image3 = new Image();
         image3.src = "{{STATIC_URL}}img/marker.png";
-        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,30,70);
+        ctx.drawImage(image3,markerXTop*screen.width/563,markerYTop*screen.width/563,17*screen.width/563,40*screen.width/563);
         //markerXTop = 268;
         //markerYTop = 156;
         //markerXBot = 268 + 30;
         //markerYBot = 156 + 70;
-        ctx.lineWidth="3";
-        ctx.strokeStyle="red";
+        ctx.lineWidth="5";
+        ctx.strokeStyle="blue";
         ctx.beginPath(); 
 
         if(rp =="3")
@@ -917,40 +1090,22 @@ function point_it(event){
         y2 = 360*screen.width/563;
         ctx.moveTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 365*screen.width/563;
-        y2 = 355*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 365*screen.width/563;
-        y2 = 365*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 360*screen.width/563;
-        y2 = 360*screen.width/563;
-        ctx.lineTo(x2,y2); 
-
+        
         x1 = 350*screen.width/563;
         y1 = 360*screen.width/563;
         x2 = 352*screen.width/563;
         y2 = 292*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 340*screen.width/563;
         y2 = 290*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 345*screen.width/563;
-        y2 = 285*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 345*screen.width/563;
-        y2 = 295*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 340*screen.width/563;
-        y2 = 290*screen.width/563;
-        ctx.lineTo(x2,y2); 
-
+        
         x1 = 322*screen.width/563;
         y1 = 289*screen.width/563;
         x2 = 322*screen.width/563;
         y2 = 268*screen.width/563;
-        ctx.moveTo(x1,y1);
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
         x2 = 292*screen.width/563;
         y2 = 268*screen.width/563;
@@ -958,33 +1113,54 @@ function point_it(event){
         x2 = 292*screen.width/563;
         y2 = 247*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 297*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 287*screen.width/563;
-        y2 = 252*screen.width/563;
-        ctx.lineTo(x2,y2);
-        x2 = 292*screen.width/563;
-        y2 = 247*screen.width/563;
-        ctx.lineTo(x2,y2);   
-
-        x1 = 280*screen.width/563;
+        
+        x1 = 270*screen.width/563;
         y1 = 234*screen.width/563;
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.moveTo(x1,y1);
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x1,y1);
         ctx.lineTo(x2,y2);
-        x2 = 253*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 275*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 243*screen.width/563;
-        y2 = 195*screen.width/563;
+        x2 = 265*screen.width/563;
+        y2 = 215*screen.width/563;
         ctx.lineTo(x2,y2);
-        x2 = 248*screen.width/563;
-        y2 = 190*screen.width/563;
-        ctx.lineTo(x2,y2); 
+        x2 = 270*screen.width/563;
+        y2 = 210*screen.width/563;
+        ctx.lineTo(x2,y2);  
         //aulas moviles
         }
+
+        //licenciatura
+        if(rp == "8")
+        {
+        var x1=490*screen.width/563;
+        var y1=423*screen.width/563;
+        var x2=490*screen.width/563;
+        var y2=400*screen.width/563;
+        
+        x2 = 450*screen.width/563;
+        y2 = 379*screen.width/563;
+        ctx.moveTo(x2,y2);
+
+        x2 = 330*screen.width/563;
+        y2 = 360*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 335*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 325*screen.width/563;
+        y2 = 365*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 330*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin licenciatura
         ctx.stroke();
 
   
