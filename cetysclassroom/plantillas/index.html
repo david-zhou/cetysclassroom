@@ -4,7 +4,7 @@
 
 {% block contenido %}
 <div class = "input-control text" style="height:8%;width:100%;">
-    <input type = "text" placeholder="Ingrese el nombre del salón a donde quiere ir" id ="Search" style="height:100%;width:100%;font-size:100%"/>
+    <input type = "text" placeholder="Ingrese el nombre del salón" id ="Search" style="height:100%;width:100%;font-size:100%"/>
     <button class="btn-search" onclick="func()"></button>
 {% for s in salon%}
 <a href="{{s.NAME}}+{{s.RP}}+{{s.X}}+{{s.Y}}">{{s.NAME}}</a><br>
@@ -64,10 +64,10 @@ function point_it(event){
     	//alert('Estacionamiento Gimnasio');
         //alert("xtop:"+markerXTop+" xbottom"+markerXBot+"ytop:"+markerYTop+" ybottom"+markerYBot)
         markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
-    ctx.clearRect(0, 0, c.width, c.height);
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
+        ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
         ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
@@ -169,6 +169,47 @@ function point_it(event){
         ctx.lineTo(x2,y2);
         }
         //fin licenciatura
+
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=56*screen.width/563;
+        var y1=79*screen.width/563;
+        var x2=56*screen.width/563;
+        var y2=96*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 113*screen.width/563;
+        y2 = 96*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 113*screen.width/563;
+        y2 = 284*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 200*screen.width/563;
+        y2 = 303*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 224*screen.width/563;
+        y2 = 340*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
         ctx.stroke();
         
     }
@@ -176,10 +217,10 @@ function point_it(event){
     {
     	//alert('Estacionamiento Estadio');
         markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
-    ctx.clearRect(0, 0, c.width, c.height);
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
+        ctx.clearRect(0, 0, c.width, c.height);
     	var image2 = new Image();
 		image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
 		ctx.drawImage(image2,0,0,screen.width-15,screen.width*465/563);
@@ -275,6 +316,47 @@ function point_it(event){
         }
         //fin licenciatura
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=150*screen.width/563;
+        var y1=80*screen.width/563;
+        var x2=150*screen.width/563;
+        var y2=100*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 113*screen.width/563;
+        y2 = 100*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 113*screen.width/563;
+        y2 = 284*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 200*screen.width/563;
+        y2 = 303*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 224*screen.width/563;
+        y2 = 340*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
+
 		ctx.stroke();
         
     }
@@ -282,9 +364,9 @@ function point_it(event){
     {
     	//alert('Estacionamiento Case');
         markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
@@ -383,16 +465,55 @@ function point_it(event){
         }
         //fin licenciatura
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=138*screen.width/563;
+        var y1=390*screen.width/563;
+        var x2=150*screen.width/563;
+        var y2=363*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 200*screen.width/563;
+        y2 = 370*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 208*screen.width/563;
+        y2 = 337*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x2 = 224*screen.width/563;
+        y2 = 340*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
+
         ctx.stroke();
 
     }
     if(pos_x>212 && pos_x<343 && pos_y>385 && pos_y<443)
     {
     	//alert('Estacionamiento Auditorio');
-markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerXTop = "{{X}}";
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
     	ctx.clearRect(0, 0, c.width, c.height);
     	var image2 = new Image();
 		image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
@@ -484,6 +605,39 @@ markerXTop = "{{X}}";
         }
         //fin licenciatura
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=285*screen.width/563;
+        var y1=405*screen.width/563;
+        var x2=341*screen.width/563;
+        var y2=410*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 350*screen.width/563;
+        y2 = 362*screen.width/563;
+        ctx.lineTo(x2,y2);
+
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
+
 		ctx.stroke();
 		
 		
@@ -492,9 +646,9 @@ markerXTop = "{{X}}";
     {
     	//alert('Estacionamiento Centro de Idiomas');
         markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
@@ -613,6 +767,28 @@ markerXTop = "{{X}}";
         }
         //fin licenciatura
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=490*screen.width/563;
+        var y1=423*screen.width/563;
+        var x2=490*screen.width/563;
+        var y2=380*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 495*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 485*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 490*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
+
         ctx.stroke();
 
     }
@@ -620,9 +796,9 @@ markerXTop = "{{X}}";
     {
     	//alert('Aulas Moviles');
         markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
@@ -683,15 +859,63 @@ markerXTop = "{{X}}";
         }
         //fin licenciatura
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=271*screen.width/563;
+        var y1=206*screen.width/563;
+        var x2=271*screen.width/563;
+        var y2=250*screen.width/563;
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 297*screen.width/563;
+        y2 = 256*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 295*screen.width/563;
+        y2 = 267*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 325*screen.width/563;
+        y2 = 272*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 323*screen.width/563;
+        y2 = 289*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 358*screen.width/563;
+        y2 = 294*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 346*screen.width/563;
+        y2 = 362*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
+
+
         ctx.stroke();
     }   
     if(pos_x>202 && pos_x<238 && pos_y>264 && pos_y<311)
     {
     	//alert('Biblioteca');
-markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerXTop = "{{X}}";
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
@@ -774,15 +998,45 @@ markerXTop = "{{X}}";
         }
         //fin licenciatura
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=228*screen.width/563;
+        var x2=223*screen.width/563;
+        var y1=313*screen.width/563;
+        var y2=340*screen.width/563;
+
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
+
         ctx.stroke();
     }
     if(pos_x>310 && pos_x<375 && pos_y>356 && pos_y<385)
     {
     	//alert('Edificio Licenciatura');
-markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerXTop = "{{X}}";
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
@@ -846,15 +1100,51 @@ markerXTop = "{{X}}";
         //aulas moviles
         }
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+
+        var x1=281*screen.width/563;
+        var y1=404*screen.width/563;
+
+        var x2=223*screen.width/563;
+        var y2=340*screen.width/563;
+
+        x1 = 348*screen.width/563;
+        y1 = 372*screen.width/563;
+        ctx.moveTo(x1,y1);
+        x1 = 350*screen.width/563;
+        y1 = 360*screen.width/563;
+        ctx.lineTo(x1,y1);
+
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
+
         ctx.stroke();
     }
     if(pos_x>408 && pos_x<448 && pos_y>328 && pos_y<358)
     {
     	//alert('CAT');
-markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerXTop = "{{X}}";
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
@@ -958,15 +1248,45 @@ markerXTop = "{{X}}";
         }
         //fin licenciatura
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=431*screen.width/563;
+        var x2=430*screen.width/563;
+        var y1=359*screen.width/563;
+        var y2=375*screen.width/563;
+
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
+
         ctx.stroke();
     }
     if(pos_x>300 && pos_x<344 && pos_y>272 && pos_y<305)
     {
     	//alert('Salas');
-markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerXTop = "{{X}}";
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
@@ -1053,15 +1373,50 @@ markerXTop = "{{X}}";
         }
         //fin licenciatura
 
+        //centro de idiomas
+        if(rp == "10")
+        {
+        var x1=271*screen.width/563;
+        var y1=206*screen.width/563;
+        var x2=271*screen.width/563;
+        var y2=250*screen.width/563;
+        
+        x2 = 323*screen.width/563;
+        y2 = 289*screen.width/563;
+        ctx.moveTo(x2,y2);
+        x2 = 358*screen.width/563;
+        y2 = 294*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 346*screen.width/563;
+        y2 = 362*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 455*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 375*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 465*screen.width/563;
+        y2 = 385*screen.width/563;
+        ctx.lineTo(x2,y2);
+        x2 = 470*screen.width/563;
+        y2 = 380*screen.width/563;
+        ctx.lineTo(x2,y2);
+        }
+        //fin centro de idiomas
         ctx.stroke();
     }
     if(pos_x>453 && pos_x<539 && pos_y>363 && pos_y<396)
     {
     	//alert('Centro de idiomas');
-markerXTop = "{{X}}";
-    markerYTop = "{{Y}}";
-    markerXBot = parseInt(markerXTop) + 17*screen.width/563;
-    markerYBot = parseInt(markerYTop) + 40*screen.width/563;
+        markerXTop = "{{X}}";
+        markerYTop = "{{Y}}";
+        markerXBot = parseInt(markerXTop) + 19*screen.width/563;
+        markerYBot = parseInt(markerYTop) + 42*screen.width/563;
         ctx.clearRect(0, 0, c.width, c.height);
         var image2 = new Image();
         image2.src = "{{STATIC_URL}}img/croquisCetysNames.png";
