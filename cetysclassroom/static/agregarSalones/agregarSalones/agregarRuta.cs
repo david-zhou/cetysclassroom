@@ -150,7 +150,7 @@ namespace agregarSalones
                     sw.Close();
 
                     //crear el otro archivo
-                    string path2= "rutas\\html_rutas.txt";
+                    string path2= "rutas\\html_rutas.js";
 
                     StreamWriter sw2 = File.AppendText(path2);
 
@@ -196,7 +196,7 @@ namespace agregarSalones
                     sw.Close();
 
                     //crear el otro archivo
-                    string path2 = "rutas\\html_rutas.txt";
+                    string path2 = "rutas\\html_rutas.js";
                     
                     StreamReader sr = new StreamReader(path2);
                     List<String> rutas = new List<string>();
