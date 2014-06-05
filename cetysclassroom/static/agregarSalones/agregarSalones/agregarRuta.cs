@@ -116,13 +116,13 @@ namespace agregarSalones
         }
         private void clearRoutes()
         {
-            pictureBox1.Image = Image.FromFile("C:\\Users\\David\\Documents\\GitHub\\cetysclassroom\\cetysclassroom\\static\\img\\croquisCetysNames2.PNG");
+            pictureBox1.Image = Image.FromFile("croquisCetysNames2.PNG");
 
         }
         private void drawRoute()
         {
             
-            Image map = Image.FromFile("C:\\Users\\David\\Documents\\GitHub\\cetysclassroom\\cetysclassroom\\static\\img\\croquisCetysNames2.PNG");
+            Image map = Image.FromFile("croquisCetysNames2.PNG");
             Pen pen = new Pen(Color.Blue, 4);
             Graphics g = Graphics.FromImage(map);
             for (int i = puntos.Count - 1; i > 0; i--)

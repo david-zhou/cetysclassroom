@@ -6,14 +6,15 @@
      <title>{% block titulo %}{% endblock titulo %}</title>
      {% load staticfiles %}
      <link rel="stylesheet" href="{{STATIC_URL}}docs/css/metro-bootstrap.css">
-     <link rel="stylesheet" href="{{STATIC_URL}}docs/css/iconFont.css"
+     <link rel="stylesheet" href="{{STATIC_URL}}docs/css/iconFont.css">
 
 		<script src="{{STATIC_URL}}docs/js/metro/metro.min.js"></script>
         <script src="{{STATIC_URL}}docs/js/jquery/jquery.min.js"></script>
         <script src="{{STATIC_URL}}docs/js/jquery/jquery.widget.min.js"></script>
         <script src="{{STATIC_URL}}docs/js/metro/metro-input-control.js"></script>
+        {% load sstatic %}
         
-        <script type="text/JavaScript" src="{{STATIC_URL}}agregarSalones\agregarSalones\bin\Debug\rutas\html_rutas.js"></script>
+        <script type="text/JavaScript" src="{% sstatic 'agregarSalones/agregarSalones/bin/Debug/rutas/html_rutas.js' %}"></script>
 </head>
 <body class = "metro"> 
 
