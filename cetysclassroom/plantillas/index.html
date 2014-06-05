@@ -6,14 +6,21 @@
 <div class = "input-control text" style="height:8%;width:100%;">
     <input type = "text" placeholder="Ingrese el nombre del salón" id ="Search" style="height:100%;width:100%;font-size:100%"/>
     <button class="btn-search" onclick="func()"></button>
+    <br>
 {% for s in salon%}
-<a href="{{s.NAME}}+{{s.RP}}+{{s.X}}+{{s.Y}}+{{s.IMG}}">{{s.NAME}}</a><br>
+<a href = "{{s.NAME}}+{{s.RP}}+{{s.X}}+{{s.Y}}+{{s.IMG}}">
+<div class ="notice fg-white">
+    {{s.NAME}}
+</div>
+</a>
+<br>
 {% empty %}
 
 {% endfor %}
 <br><br>
 
 Seleccione el punto más cercano a su ubicación
+
 <br><br>
 <div style="height:88%;width:100%;" id="pointer_div" onclick="point_it(event)">
     <img id="map" src = "{{STATIC_URL}}img/croquisCetysNames.png" style="display:none;height:100%;width:100%;"></img>
