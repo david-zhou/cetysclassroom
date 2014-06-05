@@ -7,7 +7,7 @@
     <input type = "text" placeholder="Ingrese el nombre del salón" id ="Search" style="height:100%;width:100%;font-size:100%"/>
     <button class="btn-search" onclick="func()"></button>
 {% for s in salon%}
-<a href="{{s.NAME}}+{{s.RP}}+{{s.X}}+{{s.Y}}">{{s.NAME}}</a><br>
+<a href="{{s.NAME}}+{{s.RP}}+{{s.X}}+{{s.Y}}+{{s.IMG}}">{{s.NAME}}</a><br>
 {% empty %}
 
 {% endfor %}
@@ -78,7 +78,7 @@ function point_it(event){
     if(pos_x>markerXTop && pos_x<markerXBot && pos_y>markerYTop && pos_y<markerYBot)
     {
             var roomNumber="{{numero}}";
-            window.location.href="Classroom/"+roomNumber+"+{{RP}}+{{X}}+{{Y}}";
+            window.location.href="Classroom/"+roomNumber+"+{{RP}}+{{X}}+{{Y}}+{{IMG}}";
     }
     if(pos_x>20 && pos_x<100 && pos_y>40 && pos_y<100)
     {

@@ -3,10 +3,10 @@
 {% block titulo %} Cetys Universidad  {% endblock titulo %}
 
 {% block contenido %}
-<a href ="/{{roomNumber}}+{{RP}}+{{X}}+{{Y}}">
-<button href="/{{roomNumber}}+{{RP}}+{{X}}+{{Y}}">
+<a href ="/{{roomNumber}}+{{RP}}+{{X}}+{{Y}}+{{IMG}}">
+<button href="/{{roomNumber}}+{{RP}}+{{X}}+{{Y}}+{{IMG}}">
     <i class="icon-arrow-left-3"></i>
 </button>
 </a>
-<img id="map" src = "{{STATIC_URL}}img/{{roomNumber}}.jpg"></img>
+<img id="map" src = "{{STATIC_URL}}img/{{IMG}}.jpg"></img>
 {% endblock contenido %}

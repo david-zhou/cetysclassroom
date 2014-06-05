@@ -101,6 +101,7 @@ namespace agregarSalones
                 if (reader.Read())
                 {
                     MessageBox.Show("Ese salon ya existe");
+                    conn.Close();
                     //MessageBox.Show(reader[0] + "," + reader[1] + "," + reader[2] + "," + reader[3]);     // Display the value of the key and value column for every row
                 }
                 else
@@ -132,6 +133,7 @@ namespace agregarSalones
                     SQLiteCommand insertTagsCmd = new SQLiteCommand(insertTags, conn);
                     insertTagsCmd.ExecuteNonQuery();
                     MessageBox.Show("Salon agregado");
+                    conn.Close();
                     this.Close();
                 }
                 conn.Close();
